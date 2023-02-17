@@ -1,5 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Blogs from "./components/Blogs/Blogs";
+import Charts from "./components/Charts/Charts";
 import Home from "./components/Home/Home";
+import NotFound from "./components/NotFound/NotFound";
 import Reviews from "./components/Reviews/Reviews";
 import Main from "./layout/Main";
 
@@ -17,6 +20,18 @@ function App() {
         {
           path: '/reviews',
           element: <Reviews></Reviews>
+        },
+        {
+          path: '/statistics',
+          element: <Charts></Charts>
+        },
+        {
+          path: '/blogs',
+          element: <Blogs></Blogs>
+        },
+        {
+          path: '*',
+          element: <NotFound></NotFound>
         }
       ]
     }
