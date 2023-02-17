@@ -1,6 +1,10 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
+    const allReviews = useLoaderData();
+    console.log(allReviews);
+    
     return (
         <div className='bg-zinc-100'>
             <section className='grid grid-cols-1 md:grid-cols-2 mx-auto py-8'>
@@ -19,7 +23,9 @@ const Home = () => {
             <section>
                 <h1 className='text-2xl text-gray-800 my-8 text-center'>Customer Reviews</h1>
                 <div>
-                    
+                    {
+
+                    }
                 </div>
             </section>
         </div>

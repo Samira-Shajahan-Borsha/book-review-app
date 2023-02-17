@@ -5,6 +5,7 @@ import Home from "./components/Home/Home";
 import NotFound from "./components/NotFound/NotFound";
 import Reviews from "./components/Reviews/Reviews";
 import Main from "./layout/Main";
+import { reviewLoader } from "./loaders/reviewLoader";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       children: [
         {
           path: '/',
+          loader: reviewLoader,
           element: <Home></Home>
         },
         {
