@@ -6,7 +6,6 @@ const Home = () => {
     const navigate = useNavigate();
 
     const allReviews = useLoaderData();
-    console.log(allReviews);
 
     const handleSeeAllReviews = () => {
         navigate('/reviews');
@@ -28,14 +27,14 @@ const Home = () => {
                 </div>
             </section>
             <section>
-                <h1 className='text-2xl text-gray-800 my-8 text-center'>Customer Reviews</h1>
-                <div>
+                <h1 className='text-5xl text-gray-800 my-8 text-center'>Customer Reviews</h1>
+                <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-9 px-10 py-8'>
                     {
                         allReviews.slice(0, 3).map(review => <Review key={review.id} review={review}></Review>)
                     }
                 </div>
-                <div>
-                    <button onClick={handleSeeAllReviews}>See all reviews</button>
+                <div className='text-lg flex justify-center py-10 text-white'>
+                    <button className='bg-pink-900 rounded-full px-8 py-3 hover:opacity-100 opacity-90' onClick={handleSeeAllReviews}>See all reviews</button>
                 </div>
             </section>
         </div>
