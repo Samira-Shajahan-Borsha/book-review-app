@@ -1,10 +1,16 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Review from '../Review/Review';
 
 const Reviews = () => {
+    const allReviews = useLoaderData();
+    console.log(allReviews);
     return (
         <div>
-            <h1>Reviews</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet numquam quam, tenetur rerum neque minima nemo, voluptates recusandae, fugit accusantium veritatis in obcaecati harum libero! Commodi ducimus cumque asperiores saepe?</p>
+            <h1>Reviews: {allReviews.length}</h1>
+            {
+                allReviews.map(review => <Review key={review.id} review={review}></Review>)
+            }
         </div>
     );
 };

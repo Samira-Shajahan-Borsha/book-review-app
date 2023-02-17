@@ -21,6 +21,7 @@ function App() {
         },
         {
           path: '/reviews',
+          loader: reviewLoader,
           element: <Reviews></Reviews>
         },
         {

@@ -1,10 +1,17 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
+import Review from '../Review/Review';
 
 const Home = () => {
+    const navigate = useNavigate();
+
     const allReviews = useLoaderData();
     console.log(allReviews);
-    
+
+    const handleSeeAllReviews = () => {
+        navigate('/reviews');
+    }
+
     return (
         <div className='bg-zinc-100'>
             <section className='grid grid-cols-1 md:grid-cols-2 mx-auto py-8'>
@@ -24,8 +31,11 @@ const Home = () => {
                 <h1 className='text-2xl text-gray-800 my-8 text-center'>Customer Reviews</h1>
                 <div>
                     {
-
+                        allReviews.slice(0, 3).map(review => <Review key={review.id} review={review}></Review>)
                     }
+                </div>
+                <div>
+                    <button onClick={handleSeeAllReviews}>See all reviews</button>
                 </div>
             </section>
         </div>
