@@ -32,11 +32,11 @@ function App() {
           path: '/blogs',
           element: <Blogs></Blogs>
         },
-        {
-          path: '*',
-          element: <NotFound></NotFound>
-        }
-      ]
+      ],
+    },
+    {
+      path: '*',
+      element: <NotFound></NotFound>
     }
   ]);
   return (
