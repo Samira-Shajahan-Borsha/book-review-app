@@ -13,7 +13,7 @@ const Home = () => {
 
     return (
         <div className='bg-zinc-100'>
-            <section className='grid grid-cols-1 md:grid-cols-2 mx-auto py-8'>
+            <section className='grid grid-cols-1 md:grid-cols-2 px-8 py-8'>
                 <div className='flex flex-col justify-center w-full md:pl-16 px-4'>
                     <h1 className='font-extrabold md:text-6xl text-3xl text-gray-800'>It Ends with Us: A Novel</h1>
                     <p className='text-2xl text-gray-500 mb-2'>August 2, 2016</p>
