@@ -6,7 +6,7 @@ Book Review app is a React Web App. Visitors can see the reviews of a book named
 
 * Home Page
 * Review Page
-* Stattistics Page
+* Statistics Page
 * Blog Page
 * 404 Not Found Page
 
